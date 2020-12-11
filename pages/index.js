@@ -148,7 +148,7 @@ export default function Home() {
 
         <a href="https://www.producthunt.com/posts/focus-7?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-focus-7" target="_blank">
         <Image 
-            src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=277849&theme=dark" 
+            src="images/featured.svg" 
             alt="Focus - Take a break from your screen | Product Hunt" 
             style="width: 250px; height: 54px;" 
             width="250" 
