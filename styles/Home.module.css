@@ -15,6 +15,7 @@
   border: 1px solid orange;
   border-radius: 5px;
   margin: 10px;
+  color:#eee;
 }
 .container {
   min-height: 100vh;
@@ -23,6 +24,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background:#121212;
+  color:#eee;
 }
 
 .main {

@@ -57,7 +57,10 @@ export default function Home() {
             setRunning(false);
             setisMoved(false);
             clearInterval(interval);
-
+        }
+        else {
+            setisMoved(false);
+            clearInterval(interval);
         }
     }
     return (
@@ -73,9 +76,11 @@ export default function Home() {
                 <meta name="theme-color" content="#fff"></meta>
             </Head>
             {isMoved && <button className={styles.button} onClick={() => {
-                setisMoved(false);
-            clearInterval(interval);
-                setisRunning(false);
+                document.exitFullscreen().then(() => {
+                    setisMoved(false);
+                    clearInterval(interval);
+                    setisRunning(false);
+                })
             }}> <Icon icon={x} /></button>}
             {isRunning &&
                 <>
@@ -129,8 +134,10 @@ export default function Home() {
                 </div>
                 <button
                     onClick={() => {
-                        setisRunning((wasrunning) => !wasrunning);
-                        startCounter();
+                        document.documentElement.requestFullscreen().then(() => {
+                            setisRunning((wasrunning) => !wasrunning);
+                            startCounter();
+                        })
                     }}
                     style={{
                         marginTop: "10px",
