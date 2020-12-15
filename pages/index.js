@@ -80,6 +80,10 @@ export default function Home() {
                     setisMoved(false);
                     clearInterval(interval);
                     setisRunning(false);
+                }).catch(e=>{
+                    setisMoved(false);
+                    clearInterval(interval);
+                    setisRunning(false);
                 })
             }}> <Icon icon={x} /></button>}
             {isRunning &&
